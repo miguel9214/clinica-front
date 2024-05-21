@@ -237,7 +237,7 @@ export class DataService {
               base: routes.doctorsList,
             },
             {
-              menuValue: 'Add Doctor',
+              menuValue: 'Agregar doctor',
               route: routes.addDoctor,
               base: routes.addDoctor,
             },
