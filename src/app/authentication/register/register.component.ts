@@ -29,13 +29,13 @@ export class RegisterComponent {
 
   constructor(private router:Router,private auth: AuthService) { }
 
-  
+
   submit() {
     if (this.form.value.password != this.form.value.confirmPassword) {
       this.isValidConfirmPassword = true;
     } else {
       this.isValidConfirmPassword = false;
-      this.auth.login();
+      // this.auth.login(email);
     }
   }
   passwordFunc(){

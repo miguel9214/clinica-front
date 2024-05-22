@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import {
-  
+
   CanActivate,
   Router,
-  
-  UrlTree, 
+
+  UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { routes } from '../routes/routes';
-
+ 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
   canActivate(
-    
+
   ):
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>
