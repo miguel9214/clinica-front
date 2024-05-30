@@ -11,6 +11,7 @@ import { routes } from 'src/app/shared/routes/routes';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  public ERROR = false;
   public routes = routes;
   public passwordClass = false;
 
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
 
   loginFormSubmit() {
     if (this.form.valid) {
+      this.ERROR=false;
       this.auth
         .login(
           this.form.value.email ? this.form.value.email : '',
@@ -44,9 +46,9 @@ export class LoginComponent implements OnInit {
           (resp:any) => {
             console.log(resp);
             if (resp) {
-              return this.router.navigate([routes.adminDashboard]);
+             this.router.navigate([routes.adminDashboard]);
             } else {
-              return 0;
+              this.ERROR=true;
             }
           },
           (error) => {
