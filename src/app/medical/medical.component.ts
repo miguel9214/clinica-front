@@ -9,11 +9,11 @@ interface Route {
 }
 
 @Component({
-  selector: 'app-core',
-  templateUrl: './core.component.html',
-  styleUrls: ['./core.component.scss']
+  selector: 'app-medical',
+  templateUrl: './medical.component.html',
+  styleUrls: ['./medical.component.scss']
 })
-export class CoreComponent {
+export class MedicalComponent {
   public miniSidebar = 'false';
   public expandMenu = 'false';
   public mobileSidebar = 'false';

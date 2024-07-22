@@ -12,8 +12,8 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     MedicalComponent,
-    HeaderComponent,
-    SidebarComponent,
+    // HeaderComponent,
+    // SidebarComponent,
     // ModalComponent,
   ],
   imports: [
